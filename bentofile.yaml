@@ -1,0 +1,15 @@
+service: "service:StudentDropoutService"
+
+include:
+  - "*.py"
+  - "src/**"
+  - "models/**"
+
+python:
+  packages:
+    - bentoml==1.3.17
+    - setuptools>=75.8.1,<76
+    - joblib
+    - scikit-learn
+    - pandas
+    - numpy
