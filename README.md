@@ -607,6 +607,53 @@ http://localhost:3000
 
 ---
 
+## Live API Deployment
+
+The Student Dropout Prediction model is deployed on Render using BentoML.
+
+**Live API:** https://student-dropout-prediction-iu8t.onrender.com/
+
+**Swagger API Documentation:** https://student-dropout-prediction-iu8t.onrender.com/#/
+
+**Prediction Endpoint:** `POST /predict`
+
+### Example Request
+
+```json
+{
+  "input_data": {
+    "Marital status": 1,
+    "Application mode": 1,
+    "Application order": 1,
+    "Course": 9238,
+    "Daytime/evening attendance": 1,
+    "Previous qualification": 1,
+    "Displaced": 1,
+    "Debtor": 0,
+    "Tuition fees up to date": 1,
+    "Gender": 1,
+    "Scholarship holder": 0,
+    "Age at enrollment": 20,
+    "Curricular units 1st sem (approved)": 6,
+    "Curricular units 1st sem (grade)": 13.0,
+    "Curricular units 2nd sem (approved)": 6,
+    "Curricular units 2nd sem (grade)": 13.0,
+    "Unemployment rate": 10.8,
+    "Inflation rate": 1.4,
+    "GDP": 1.74
+  }
+}
+```
+
+### Example Response
+
+```json
+{
+  "prediction": "Graduate"
+}
+```
+
+
 # Installation
 
 ## Clone the Repository
